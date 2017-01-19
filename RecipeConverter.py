@@ -2,7 +2,12 @@
 # Assignment One
 # 1/19/17
 
-# This will ask the user to enter the original recipe
+grams1 = 120;   #Grams of flour per cup
+grams2 = 237;   #Grams of water per cup
+grams3 = 5;     #Grams of salt per teaspoon
+grams4 = 3;     #Grams of yeast per teaspoon
+
+# This will ask the user to enter the original recipe.
 print " -- Original Recipe -- "
 print ""
 print "Enter the amount of flour (cups)",
@@ -17,11 +22,21 @@ yeast = raw_input()
 print "Enter the loaf adjustment factor (e.g 2.0 double the size):",
 adjustment = raw_input()
 
-# This multiplies the adjustment factor to the recipe to get the modified recipe
+# This multiplies the adjustment factor to the recipe to get the modified recipe.
 print " -- Modified Recipe --"
 print ""
-print "Flour: %.1f" %(float(flour) * float(adjustment))
-print "Water: %.1f" %(float(water) * float(adjustment))
-print "Salt: %.1f" %(float(salt) * float(adjustment))
-print "Yeast: %.1f" %(float(yeast) * float(adjustment))
+print "Flour: %.2f" %(float(flour) * float(adjustment))
+print "Water: %.2f" %(float(water) * float(adjustment))
+print "Salt: %.2f" %(float(salt) * float(adjustment))
+print "Yeast: %.2f" %(float(yeast) * float(adjustment))
+print "Happy Baking!"
+print ""
+
+# This multiplies the the modified recipe by the grams per cup/teaspoon for each ingredient.
+print " -- Modified Recipe in Grams -- "
+print ""
+print "Flour: %.2f" %(float(flour) * grams1 * float(adjustment))
+print "Water: %.2f" %(float(water) * grams2 * float(adjustment))
+print "Salt: %.2f" %(float(salt) * grams3 * float(adjustment))
+print "Yeast: %.2f" %(float(yeast) * grams4 * float(adjustment))
 print "Happy Baking!"
