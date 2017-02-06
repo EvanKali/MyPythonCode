@@ -14,6 +14,7 @@ for line in file:
         temperature.append(value)
     
 for data in temperature[:81]:
+    if i < 82: 
         temp = float(data)
         sum = sum + temp
         average = sum / 81
