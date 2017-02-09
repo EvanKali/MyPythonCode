@@ -11,35 +11,38 @@ def readTemps():
         data = line.split(" ")
         for temp in data:
             temperature.append(temp)
-            return temperature
+    return temperature
     
 def calculateAve(temperature, start, stop):
     i = 0
     sum = 0
+    average = 0
+    temp = 0
     for data in temperature:
+        i = i + 1
         if i >= start and i < stop + 1: 
-            i = i + 1
             temp = float(data)
             sum = sum + temp
-            average = sum / i
-            return average
+        average = sum / (stop - start)
+    return average
                 
 def count(temperature, start, stop):
     j = 0
+    positive = 0 
     for data in temperature:
-        if j >= start and j < stop:
-            j = j + 1
+        j = j + 1
+        if j >= start and j < stop + 1:
             temp = float(data)
             if temp > 0:
                 positive = positive + 1
-                return positive
+    return positive
                 
 def main():
     temperature = readTemps()
     first = calculateAve(temperature, 0, 81)
-    second = calculateAve(temperature, 82, 116)
+    second = calculateAve(temperature, 82, 117)
     pos1 = count(temperature, 0, 81)
-    pos2 = count(temperature, 82, 116)
+    pos2 = count(temperature, 82, 117)
     print "During the first 81 years, the average derivation from the temperature anomaly is %s" %first
     print "During the first 81 years, %s had a positive temperature anomaly" %pos1
     print "During the last 35 years, the average derivation from the temperature anomaly is %s" %second
