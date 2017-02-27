@@ -50,5 +50,5 @@ def main():
     birds = countBirds("Birds.txt")
     count = askUser("Enter a bird name:", birds)
     print "I have seen that bird %s time(s)" %count
-    
+     
 main()
