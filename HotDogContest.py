@@ -6,10 +6,18 @@ import random
 import Epic
 import time
 
+#-------------------------------------------------------------------------------
 # This will get the user's guess on which contestent will win...
+#-------------------------------------------------------------------------------
+
 def Guess():
     guess = Epic.userString("Pick a winner (Tom, Sally, Fred)")
     return guess
+    
+#-------------------------------------------------------------------------------
+# The competition is in this function...each run through the while loop will 
+# add a random number of hot dogs for each contestent.
+#-------------------------------------------------------------------------------
 
 def Competition():
     Comp = True
@@ -42,6 +50,11 @@ def Competition():
             Winner = "Fred"
             Comp = False
     return Winner
+
+#-------------------------------------------------------------------------------
+# The main records the user's guess and runs the competition...Then it decideds
+# if the user won or not.
+#-------------------------------------------------------------------------------
 
 def main():
     guess = Guess()
