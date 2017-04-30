@@ -4,7 +4,7 @@ def userInt(prompt):
     return num
     
 def userString(prompt):
-    print prompt
+    print prompt,
     s = raw_input()
     return s
     
